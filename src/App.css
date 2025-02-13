@@ -1,0 +1,99 @@
+/* Fundo geral da aplicação */
+body {
+  background-color: black;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.simon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.simon-board {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  width: 320px;
+  height: 320px;
+  background: #222;
+  border-radius: 50%;
+  padding: 20px;
+  border: 8px solid #444;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.simon-button {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.1s ease-in-out;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.3);
+  border: 4px solid #111;
+}
+
+.simon-button:active {
+  transform: scale(1.1);
+}
+
+.red { background-color: #ff4b4b; }
+.green { background-color: #4bff4b; }
+.blue { background-color: #4b4bff; }
+.yellow { background-color: #ffff4b; }
+
+.red.active { background-color: #ff9999; }
+.green.active { background-color: #99ff99; }
+.blue.active { background-color: #9999ff; }
+.yellow.active { background-color: #ffff99; }
+
+/* Painel superior do jogo */
+.score-display {
+  background: #222;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Botões de controle */
+.control-panel {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.control-panel button {
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.control-panel button:hover {
+  opacity: 0.8;
+}
+
+.start-btn {
+  background: #007bff;
+  color: white;
+}
+
+.reset-btn {
+  background: #ff4b4b;
+  color: white;
+}
